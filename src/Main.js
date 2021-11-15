@@ -16,14 +16,15 @@ const Main = ({
   const intl = useIntl();
   return (
     <main>
-      {/* <div className="btn-toggle" onClick={() => handleToggleSidebar(true)}>
+      <div className="btn-toggle" onClick={() => handleToggleSidebar(true)}>
         <FaBars />
       </div>
       <header>
-        <h1>
-          <img width={80} src={reactLogo} alt="react logo" /> {intl.formatMessage({ id: 'title' })}
+        {/* <h1>
+          <img width={80} src={reactLogo} alt="react logo" />{" "}
+          {intl.formatMessage({ id: "title" })}
         </h1>
-        <p>{intl.formatMessage({ id: 'description' })}</p>
+        <p>{intl.formatMessage({ id: "description" })}</p>
         <div className="social-bagdes">
           <a
             href="https://github.com/azouaoui-med/react-pro-sidebar"
@@ -45,9 +46,9 @@ const Main = ({
               src="https://img.shields.io/github/forks/azouaoui-med/react-pro-sidebar?style=social"
             />
           </a>
-        </div>
+        </div> */}
       </header>
-      <div className="block ">
+      {/* <div className="block ">
         <Switch
           height={16}
           width={30}
@@ -58,7 +59,7 @@ const Main = ({
           onColor="#219de9"
           offColor="#bbbbbb"
         />
-        <span> {intl.formatMessage({ id: 'collapsed' })}</span>
+        <span> {intl.formatMessage({ id: "collapsed" })}</span>
       </div>
       <div className="block">
         <Switch
@@ -71,7 +72,7 @@ const Main = ({
           onColor="#219de9"
           offColor="#bbbbbb"
         />
-        <span> {intl.formatMessage({ id: 'rtl' })}</span>
+        <span> {intl.formatMessage({ id: "rtl" })}</span>
       </div>
       <div className="block">
         <Switch
@@ -84,25 +85,38 @@ const Main = ({
           onColor="#219de9"
           offColor="#bbbbbb"
         />
-        <span> {intl.formatMessage({ id: 'image' })}</span>
+        <span> {intl.formatMessage({ id: "image" })}</span>
       </div>
 
       <footer>
         <small>
-          © {new Date().getFullYear()} made with <FaHeart style={{ color: 'red' }} /> by -{' '}
-          <a target="_blank" rel="noopener noreferrer" href="https://azouaoui.netlify.com">
+          © {new Date().getFullYear()} made with{" "}
+          <FaHeart style={{ color: "red" }} /> by -{" "}
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://azouaoui.netlify.com"
+          >
             Mohamed Azouaoui
           </a>
         </small>
         <br />
         <div className="social-bagdes">
-          <a href="https://github.com/azouaoui-med" target="_blank" rel="noopener noreferrer">
+          <a
+            href="https://github.com/azouaoui-med"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <img
               alt="GitHub followers"
               src="https://img.shields.io/github/followers/azouaoui-med?label=github&style=social"
             />
           </a>
-          <a href="https://twitter.com/azouaoui_med" target="_blank" rel="noopener noreferrer">
+          <a
+            href="https://twitter.com/azouaoui_med"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <img
               alt="Twitter Follow"
               src="https://img.shields.io/twitter/follow/azouaoui_med?label=twitter&style=social"
