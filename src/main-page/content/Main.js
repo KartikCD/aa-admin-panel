@@ -1,26 +1,23 @@
-import React from "react";
-import { useIntl } from "react-intl";
-import Switch from "react-switch";
-import { FaHeart, FaBars } from "react-icons/fa";
-import reactLogo from "./assets/logo.svg";
+import React from 'react';
+import { FaBars } from 'react-icons/fa';
 
-const Main = ({
-  collapsed,
-  rtl,
-  image,
-  handleToggleSidebar,
-  handleCollapsedChange,
-  handleRtlChange,
-  handleImageChange,
-}) => {
-  const intl = useIntl();
-  return (
-    <main>
-      <div className="btn-toggle" onClick={() => handleToggleSidebar(true)}>
-        <FaBars />
-      </div>
-      <header>
-        {/* <h1>
+const Main = ({ handleToggleSidebar, children }) => {
+    return (
+        <main>
+            <div className="btn-toggle" onClick={() => handleToggleSidebar(true)}>
+                <FaBars />
+            </div>
+
+            {/* <Router>
+        <Switch>
+          <Route exact path={PATHS.HOME}></Route>
+        </Switch>
+      </Router> */}
+
+            {children}
+
+            {/* <header> */}
+            {/* <h1>
           <img width={80} src={reactLogo} alt="react logo" />{" "}
           {intl.formatMessage({ id: "title" })}
         </h1>
@@ -47,8 +44,8 @@ const Main = ({
             />
           </a>
         </div> */}
-      </header>
-      {/* <div className="block ">
+            {/* </header> */}
+            {/* <div className="block ">
         <Switch
           height={16}
           width={30}
@@ -124,8 +121,8 @@ const Main = ({
           </a>
         </div>
       </footer> */}
-    </main>
-  );
+        </main>
+    );
 };
 
 export default Main;
