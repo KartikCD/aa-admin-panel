@@ -1,10 +1,26 @@
-import { useIntl } from 'react-intl';
+import { ENDPOINTS } from "../constants";
+import { makeGetRequest } from "../util/requests/makeGetRequest";
 
 export function useContacts() {
-    const intl = useIntl();
-    const rows = intl.messages['contactSection'];
+  const { data, loading, error } = makeGetRequest(ENDPOINTS.CONTACTS);
+  const rows = ["Name", "Email", "Phone", "Description"];
 
-    return {
-        rows,
-    };
+  // const data = [];
+  // const planTripObj = {
+  //   name: "Keval Dave",
+  //   email: "chawdakartik@gmail.com",
+  //   phoneNumber: 919987746997,
+  //   enquiry: "Hello Please Contact me",
+  // };
+
+  // for (var i = 0; i < 5; i++) {
+  //   data.push(planTripObj);
+  // }
+
+  return {
+    data,
+    loading,
+    error,
+    rows,
+  };
 }

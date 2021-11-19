@@ -1,5 +1,4 @@
 import React from 'react';
-import { useIntl } from 'react-intl';
 import {
     ProSidebar,
     Menu,
@@ -16,7 +15,6 @@ import sidebarBg from '../../assets/bg1.jpg';
 import SidebarItem from '../../ui-components/sidebar-item/SidebarItem';
 
 const Sidebar = ({ image, collapsed, rtl, toggled, handleToggleSidebar }) => {
-    const intl = useIntl();
     return (
         <ProSidebar
             image={image ? sidebarBg : false}
@@ -39,24 +37,16 @@ const Sidebar = ({ image, collapsed, rtl, toggled, handleToggleSidebar }) => {
                         whiteSpace: 'nowrap',
                     }}
                 >
-                    {intl.formatMessage({ id: 'sidebarTitle' })}
+          AA - Admin Panel
                 </div>
             </SidebarHeader>
 
             <SidebarContent>
                 <Menu iconShape="circle">
-                    <SidebarItem icon={<FaTachometerAlt />}>
-                        {intl.formatMessage({ id: 'profile' })}
-                    </SidebarItem>
-                    <SidebarItem icon={<TiContacts />}>
-                        {intl.formatMessage({ id: 'contacts' })}
-                    </SidebarItem>
-                    <SidebarItem icon={<MdSubscriptions />}>
-                        {intl.formatMessage({ id: 'subscribers' })}
-                    </SidebarItem>
-                    <SidebarItem icon={<GiFootTrip />}>
-                        {intl.formatMessage({ id: 'plantrip' })}
-                    </SidebarItem>
+                    <SidebarItem icon={<FaTachometerAlt />}>Profile</SidebarItem>
+                    <SidebarItem icon={<TiContacts />}>Contacts</SidebarItem>
+                    <SidebarItem icon={<MdSubscriptions />}>Subscribers</SidebarItem>
+                    <SidebarItem icon={<GiFootTrip />}>Plan a Trip</SidebarItem>
                 </Menu>
             </SidebarContent>
 
@@ -81,7 +71,7 @@ const Sidebar = ({ image, collapsed, rtl, toggled, handleToggleSidebar }) => {
                                 overflow: 'hidden',
                             }}
                         >
-                            {intl.formatMessage({ id: 'logout' })}
+              Logout
                         </span>
                     </a>
                 </div>

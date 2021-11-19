@@ -1,3 +1,5 @@
+import React from 'react';
+
 import './MyTable.css';
 export const MyTable = ({ tableHead, children }) => {
     return (

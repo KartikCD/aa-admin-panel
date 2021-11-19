@@ -1,4 +1,4 @@
-import './TableRow.css';
-export const TableRow = ({ value }) => {
-    return <td data-label={value}>{value}</td>;
+import React from 'react';
+export const TableRow = ({ value, label }) => {
+    return <td data-label={label}>{value}</td>;
 };

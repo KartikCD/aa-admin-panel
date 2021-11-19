@@ -40,6 +40,9 @@
             "error",
             "always"
         ],
-        "react/react-in-jsx-scope": "off"
+        "react/react-in-jsx-scope": "off",
+        "react/jsx-key": "off",
+        "react/display-name": "off",
+        "react/prop-types": "off"
     }
 }

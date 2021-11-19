@@ -1,23 +1,23 @@
-import React from 'react';
-import { FaBars } from 'react-icons/fa';
+import React from "react";
+import { FaBars } from "react-icons/fa";
 
 const Main = ({ handleToggleSidebar, children }) => {
-    return (
-        <main>
-            <div className="btn-toggle" onClick={() => handleToggleSidebar(true)}>
-                <FaBars />
-            </div>
+  return (
+    <main>
+      <div className="btn-toggle" onClick={() => handleToggleSidebar(true)}>
+        <FaBars />
+      </div>
 
-            {/* <Router>
+      {/* <Router>
         <Switch>
           <Route exact path={PATHS.HOME}></Route>
         </Switch>
       </Router> */}
 
-            {children}
+      {children}
 
-            {/* <header> */}
-            {/* <h1>
+      {/* <header> */}
+      {/* <h1>
           <img width={80} src={reactLogo} alt="react logo" />{" "}
           {intl.formatMessage({ id: "title" })}
         </h1>
@@ -44,8 +44,8 @@ const Main = ({ handleToggleSidebar, children }) => {
             />
           </a>
         </div> */}
-            {/* </header> */}
-            {/* <div className="block ">
+      {/* </header> */}
+      {/* <div className="block ">
         <Switch
           height={16}
           width={30}
@@ -121,8 +121,8 @@ const Main = ({ handleToggleSidebar, children }) => {
           </a>
         </div>
       </footer> */}
-        </main>
-    );
+    </main>
+  );
 };
 
 export default Main;
