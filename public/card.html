@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .name {
+        grid-area: name;
+      }
+      .email {
+        grid-area: email;
+      }
+      .phone {
+        grid-area: phone;
+      }
+      .country {
+        grid-area: country;
+      }
+      .budget {
+        grid-area: budget;
+      }
+      .occasion {
+        grid-area: occasion;
+      }
+      .adult {
+        grid-area: adult;
+      }
+      .children {
+        grid-area: children;
+      }
+      .infant {
+        grid-area: infant;
+      }
+      .duration {
+        grid-area: duration;
+      }
+      .dateOfDeparture {
+        grid-area: dateOfDeparture;
+      }
+      .place {
+        grid-area: place;
+      }
+      .intrest {
+        grid-area: intrest;
+      }
+      .special {
+        grid-area: special;
+      }
+
+      .grid-container {
+        display: grid;
+        grid-template-areas:
+          "name name name name name name"
+          "email email email phone phone phone"
+          "country country budget budget occasion occasion"
+          "adult adult children children infant infant"
+          "duration duration dateOfDeparture dateOfDeparture place place"
+          "intrest intrest intrest intrest intrest intrest"
+          "special special special special special special";
+        grid-gap: 4px;
+        background-color: #2196f3;
+        padding: 4px;
+        margin: 16px 0 16px 0;
+      }
+
+      .grid-container > p {
+        background-color: rgba(255, 255, 255, 0.8);
+        text-align: center;
+        padding: 8px 0;
+        margin-block-end: 0;
+        margin-block-start: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="grid-container">
+      <p class="name"><b>Kartik Chawda</b></p>
+      <p class="email">chawdakartik@gmail.com</p>
+      <p class="phone">9987746997</p>
+      <p class="country">Dubai</p>
+      <p class="budget">Budget: 5000</p>
+      <p class="occasion">Occasion: Honeymoon</p>
+      <p class="adult">Adult: 4</p>
+      <p class="children">Children: 2</p>
+      <p class="infant">Infant: 1</p>
+      <p class="duration">3 Days</p>
+      <p class="dateOfDeparture">01/10/1999</p>
+      <p class="place">Mumbai, Maharashtra</p>
+      <p class="intrest">Intrest: Sky Diving</p>
+      <p class="special">Gym required in hotel</p>
+    </div>
+
+    <div class="grid-container">
+      <div class="name">Kartik Chawda</div>
+      <div class="email">chawdakartik@gmail.com</div>
+      <div class="phone">9987746997</div>
+      <div class="country">Dubai</div>
+      <div class="budget">Budget: 5000</div>
+      <div class="occasion">Occasion: Honeymoon</div>
+      <div class="adult">Adult: 4</div>
+      <div class="children">Children: 2</div>
+      <div class="infant">Infant: 1</div>
+      <div class="duration">3 Days</div>
+      <div class="dateOfDeparture">01/10/1999</div>
+      <div class="place">Mumbai, Maharashtra</div>
+      <div class="intrest">Intrest: Sky Diving</div>
+      <div class="special">Gym required in hotel</div>
+    </div>
+  </body>
+</html>
