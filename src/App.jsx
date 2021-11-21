@@ -5,7 +5,7 @@ import Contacts from "./contacts/Contacts";
 import Subscribers from "./subscribers/Subscribers";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { PATHS } from "./constants";
-import { PlanTrip } from "./plan-trip/PlanTrip";
+import PlanTrip from "./plan-trip/PlanTrip";
 
 export const App = React.memo(() => {
 	return (
