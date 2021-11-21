@@ -1,11 +1,11 @@
-import React, { useMemo, memo } from 'react';
-import { MyTable } from '../ui-components/table/MyTable';
-import { TableHead, TableRow } from '../ui-components/table';
-import { useContacts } from './useContacts';
+import React, { memo, useMemo } from 'react';
+import { MyTable, TableHead, TableRow } from '../ui-components/table';
 import { WithEmptyList, WithError, WithLoading } from '../util-components';
+import { useSubscribers } from './useSubscribers'
 
-const Contacts = memo(() => {
-    const { rows, isLoading, apiData, serverError  } = useContacts();
+const Subscribers = memo(() => {
+    const { rows, isLoading, apiData, serverError } = useSubscribers();
+
     const listTableHeadings = useMemo(() => {
         return rows.map((headings) => {
             return <TableHead>{headings}</TableHead>;
@@ -13,19 +13,16 @@ const Contacts = memo(() => {
     }, [rows]);
 
     const listItems = useMemo(() => {
-      return apiData?.data.map((d) => {
-        return (
-          <tr>
-            <TableRow value={d.name} label={rows[0]} />
-            <TableRow value={d.email} label={rows[1]} />
-            <TableRow value={d.phoneNumber} label={rows[2]} />
-            <TableRow value={d.enquiry} label={rows[3]} />
-          </tr>
-        );
-      });
-    }, [apiData, rows]);
+        return apiData?.data.map((d) => {
+          return (
+            <tr>
+              <TableRow value={d.email} label={rows[0]} />
+            </tr>
+          );
+        });
+      }, [apiData, rows]);
 
-    return (
+      return (
         <WithLoading loading={isLoading}>
             <WithError error={serverError}>
                 <WithEmptyList
@@ -40,4 +37,4 @@ const Contacts = memo(() => {
     );
 });
 
-export default Contacts;
+export default Subscribers;

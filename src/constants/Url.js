@@ -5,6 +5,7 @@ export const URLS = {
 export const ENDPOINTS = {
   PLAN_TRIP: "/plan-a-trip",
   CONTACTS: "/contact-us",
+  SUBSCRIBERS: "/mailing-list",
 };
 
 export const TYPE = {
